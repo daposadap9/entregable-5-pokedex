@@ -168,7 +168,7 @@ useEffect(()=>{
             <li onClick={handleClickPreviusPage} className='p-3 bg-red-600 font-bold text-white rounded-md cursor-pointer'>{"<"}</li>
             {/*Lista de paginas*/}
             {
-                pagesInBlock.map(numberPage => <li onClick={()=>setCurrentPage(numberPage)} className={`p-3 bg-red-600 font-bold text-white rounded-md cursor-pointer ${numberPage === currentPage && "bg-red-400"} hover:bg-red-400`} 
+                pagesInBlock.map(numberPage => <li onClick={()=>setCurrentPage(numberPage)} className={`p-3 bg-red-600 font-bold text-white rounded-md cursor-pointer ${numberPage === currentPage && "bg-red-300"} hover:bg-red-400`} 
                 key={numberPage}>{numberPage}</li>)
             }
             {/*Pagina siguiente*/}
