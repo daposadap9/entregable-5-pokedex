@@ -76,7 +76,6 @@ const Pokedex = () => {
             setCurrentPage(newCurrentPage)
         }
     }
-
     
 
 useEffect(() => {
@@ -136,7 +135,7 @@ useEffect(()=>{
                 </select>
             </form>
         </section>
-
+        
         {/*Paginacion*/}
         <ul className='flex gap-3 justify-center py-4 cursor-pointer px-2 flex-wrap'>
              {/*Primera Pagina*/}
@@ -145,7 +144,7 @@ useEffect(()=>{
             <li onClick={handleClickPreviusPage} className='p-3 bg-red-600 font-bold text-white rounded-md cursor-pointer'>{"<"}</li>
             {/*Lista de paginas*/}
             {
-                pagesInBlock.map(numberPage => <li onClick={()=>setCurrentPage(numberPage)} className={`p-3 bg-red-600 font-bold text-white rounded-md cursor-pointer ${numberPage === currentPage && "bg-red-400"} hover:bg-red-400`} 
+                pagesInBlock.map(numberPage => <li onClick={()=>setCurrentPage(numberPage)} className={`p-3 bg-red-600 font-bold text-white rounded-md cursor-pointer ${numberPage == currentPage && "bg-red-300"} hover:bg-red-400`} 
                 key={numberPage}>{numberPage}</li>)
             }
             {/*Pagina siguiente*/}
@@ -153,6 +152,7 @@ useEffect(()=>{
             {/*Ultima Pagina*/}
             <li onClick={()=> setCurrentPage(lastPage)} className='p-3 bg-red-600 font-bold text-white rounded-md cursor-pointer'>{">>"}</li>
         </ul>
+        
         {/*Seccion lista de pokemons*/}
         <section className='grid gap-10 auto-rows-auto grid-cols-[repeat(auto-fill,_250px)] justify-center max-w-7xl mx-auto'>
             {
@@ -168,7 +168,7 @@ useEffect(()=>{
             <li onClick={handleClickPreviusPage} className='p-3 bg-red-600 font-bold text-white rounded-md cursor-pointer'>{"<"}</li>
             {/*Lista de paginas*/}
             {
-                pagesInBlock.map(numberPage => <li onClick={()=>setCurrentPage(numberPage)} className={`p-3 bg-red-600 font-bold text-white rounded-md cursor-pointer ${numberPage === currentPage && "bg-red-300"} hover:bg-red-400`} 
+                pagesInBlock.map(numberPage => <li onClick={()=>setCurrentPage(numberPage)} className={`p-3 bg-red-600 font-bold text-white rounded-md cursor-pointer ${numberPage == currentPage && "bg-red-300"} hover:bg-red-400`} 
                 key={numberPage}>{numberPage}</li>)
             }
             {/*Pagina siguiente*/}
