@@ -137,7 +137,7 @@ useEffect(()=>{
         </section>
         
         {/*Paginacion*/}
-        <ul className='flex gap-3 justify-center py-4 cursor-pointer px-2 flex-wrap'>
+        <ul className='flex gap-3 justify-center py-4 cursor-pointer px-2 flex-wrap '>
              {/*Primera Pagina*/}
              <li onClick={()=> setCurrentPage(1)} className='p-3 bg-red-600 font-bold text-white rounded-md cursor-pointer'>{"<<"}</li>
             {/*Pagina anterior*/}
